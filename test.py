@@ -219,7 +219,7 @@ def main(mess, mod):
     elif mod == 1:
         temp_li = []
         final = []
-        for i in wrap(mess, 16):
+        for i in wrap(mess, 16):   # разбиваем текст по 16 символом, итерируемся по ним
             bin_mess, bin_key = to_bin(i), to_bin(KEY)
 
             permuted_key, permuted_block = permute(
